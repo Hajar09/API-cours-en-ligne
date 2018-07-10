@@ -1,0 +1,19 @@
+extends layout
+block content 
+    h2 Ajouter un cours
+    p Veuillez ajouter un cours en ligne
+    form(method="POST", action="/add", enctype="multipart/form-data")
+        .form-group
+            label Title du cours
+            input.form-control(name="name", type="text", placeholder="entrez votre cours")
+        .form-group 
+            label Auteur
+            input.form-control(name="author", type="text", placeholder="entrez les acteurs")
+        .form-group
+            label Tags
+            input.form-control(name="tags", type="text", placeholder="entrez les tags")
+        .form-group
+            label Date
+            input.form-control(name="date", type="date", placeholder="entrez l'année'")
+        input.btn.btn-primary(type="submit", value="ajouter")
+
